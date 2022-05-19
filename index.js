@@ -2,12 +2,7 @@ const express = require('express')
 const mysql = require("mysql2")
 const cors = require("cors")
 
-const setting = {
-    "host": "localhost" , 
-    "user": "root" ,
-    "password": "milkiyas" ,
-    "database": "nerd"
-}
+const setting = require("./setting.json");
 
 const connection = mysql.createConnection(setting);
 connection.connect((err) => {
